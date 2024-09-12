@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "win-init",
+            "type": "shell",
+            "command": "python -m venv env && .\\env\\Scripts\\activate && pip install -r requirements.txt",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "linux-init",
+            "type": "shell",
+            "command": "python3 -m venv env && source env/bin/activate && pip install -r requirements.txt",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
